@@ -1,0 +1,37 @@
+HDF_config:
+  name: HDF_config 
+  TRAIN_PATH1: L:\AEM3DFWD-FNO\mat/test0-3000new.mat           
+  TRAIN_PATH2: L:\AEM3DFWD-FNO\mat/test3000-6000new.mat
+  TRAIN_PATH3: L:\AEM3DFWD-FNO\mat/test6000-9000new.mat
+  TRAIN_PATH4: L:\AEM3DFWD-FNO\mat/test9000-12000new.mat
+  TRAIN_PATH5: L:\AEM3DFWD-FNO\mat/test12000-15000new.mat
+  TRAIN_PATH6: L:\AEM3DFWD-FNO\mat/test15000-18000new.mat
+  TRAIN_PATH7: L:\AEM3DFWD-FNO\mat/test18000-21000new.mat
+  TRAIN_PATH8: L:\AEM3DFWD-FNO\mat/test21000-24000new.mat
+  TRAIN_PATH9: L:\AEM3DFWD-FNO\mat/test24000-27000new.mat
+  TEST_PATH1: L:\AEM3DFWD-FNO\mat/test27000-30000new.mat
+  save_mode: state_dict
+  patience: 10 
+  print_model_flag: True 
+  cuda_id: 0 
+  n_out: 2 # BZreal, BZimag
+  s_train: [48,48,20,5,12] # resolution in (x,y,z) direction
+  s_test: [48,48,20,5,12] # resolution in (x,y,z) direction
+  layer_sizes: [256,128,64,12] # the last layer is the number of receivers
+  layer_fno: 3 
+  layer_ufno: 3 
+  modes: 14  # cutoff modes
+  width: 36  # lift layer
+  act_fno : gelu 
+  init_func: xavier_uniform
+  ntrain: 27000 
+  ntest: 3000   
+  batch_size: 5
+  learning_rate: 0.0001
+  epochs: 300
+  thre_epoch: 500 
+  save_step: 10 
+  step_size: 50  
+  gamma: 0.5 
+
+
